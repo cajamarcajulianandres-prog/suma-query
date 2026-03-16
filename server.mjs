@@ -23,6 +23,8 @@ const server = createServer((req, res) => {
     res.end(respuestaJson);
 });
 
-server.listen(3002, '127.0.0.1', () => {
-    console.log('Servicio SUMA QUERY en 127.0.0.1:3002');
+const PORT = process.env.PORT || 3002;
+
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servicio SUMA QUERY en 0.0.0.0:${PORT}`);
 });
